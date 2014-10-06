@@ -16,6 +16,21 @@ Window
 		onRelaunched: console.log("The browser has been relaunched with parameters: " + parameters);
 	}
 
+	MenuButton {
+		id: mainMenuButton
+		anchors.top: parent.top
+		anchors.left: parent.left
+		width: 30
+		height: 30
+	}
+	TabBar {
+		id: mainTabBar
+		anchors.top: parent.top
+		anchors.left: mainMenuButton.right
+		width: parent.width - mainMenuButton.width
+		height: 30
+	}
+
 	WebView {
 		id: webViewItem
 		anchors.top: parent.top
